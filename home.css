@@ -1,0 +1,123 @@
+body {
+    background-color: #000;
+}
+
+#home-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#home-header h1 {
+    font-family: Catamaran;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgb(53, 128, 214);
+}
+
+#home-header h3 {
+    font-family: Cormorant Garamond;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+    line-height: 40px;
+    text-shadow: 2px 2px 8px rgb(53, 128, 214);
+}
+
+#greetings {
+    color: #fdf90b;
+    font-size: 40px;
+    text-shadow: 3px 3px 8px blue;
+    text-transform: uppercase;
+}
+
+.over-lay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: lightslategray;
+    opacity: 0.75;
+}
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url("img/IMG_0451.jpg")
+}
+
+.slideshow li:nth-child(2) {
+    background-image: url('img/golfers2.jpg');
+    animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3) {
+    background-image: url('img/IMG_2931.jpg');
+    animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4) {
+    background-image: url('img/wegolfers.jpg');
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5) {
+    background-image: url('img/IMG_3049.jpg');
+    animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20% {
+        opacity: 1
+    }
+    30% {
+        opacity: 0
+    }
+}
+
+
+/* Older browser support - class added by modernizr */
+
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
